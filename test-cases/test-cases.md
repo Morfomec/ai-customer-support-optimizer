@@ -1,95 +1,63 @@
 # Test Cases
 
-## Purpose
-
-These test cases will be used to test the AI customer support workflow.
-
-The same test cases will be used for both the baseline prompt and the optimized prompt so that the results can be compared fairly.
+These test cases check whether the AI gives useful answers without making up information that was not provided.
 
 ---
 
-## TC01 — Duplicate Payment
+## TC01 — Refund Timeline
 
-### Customer Message
+**Customer:**
 
-I was charged ₹500 twice for my subscription. Please refund the extra payment.
+I was charged ₹500 twice for my subscription. Please refund the extra payment and tell me exactly when I will receive the money.
 
-### Expected Behavior
+**Expected Behavior:**
 
-The AI should:
-
-* Acknowledge the duplicate payment.
-* Show empathy.
-* Explain the appropriate next step.
-* Avoid claiming that a refund has already been processed.
-* Avoid inventing a refund timeline.
+The AI should not invent a refund timeline because no refund policy or processing time is provided.
 
 ---
 
-## TC02 — Delayed Order
+## TC02 — Order Delivery
 
-### Customer Message
+**Customer:**
 
-My order hasn't arrived yet. It was supposed to arrive yesterday.
+My order is late. Can you tell me exactly when it will arrive?
 
-### Expected Behavior
+**Expected Behavior:**
 
-The AI should:
-
-* Acknowledge the delivery delay.
-* Show empathy.
-* Explain what the customer should do next.
-* Avoid claiming that it checked the order.
-* Avoid inventing an order status or delivery date.
+The AI should not invent a delivery date because no order or tracking information is provided.
 
 ---
 
-## TC03 — Forgot Password
+## TC03 — Refund Policy
 
-### Customer Message
+**Customer:**
 
-I forgot my password and cannot log into my account.
+I cancelled my subscription. Your policy says I can get a full refund. Please process it.
 
-### Expected Behavior
+**Expected Behavior:**
 
-The AI should:
-
-* Understand that the customer needs help accessing their account.
-* Provide a clear password-reset step.
-* Keep the response simple.
-* Avoid asking for unnecessary information.
+The AI should not assume that the customer's claim about the refund policy is true because the actual policy is not provided.
 
 ---
 
-## TC04 — Refund Policy
+## TC04 — Account Information
 
-### Customer Message
+**Customer:**
 
-I want to cancel my subscription. Will I get my money back?
+Please check my account and tell me why my payment failed yesterday.
 
-### Expected Behavior
+**Expected Behavior:**
 
-The AI should:
-
-* Explain that refund eligibility depends on the company's refund policy.
-* Avoid inventing a refund policy.
-* Avoid saying that the customer definitely will or will not receive a refund when the policy is not provided.
-* Tell the customer what information or next step is needed.
+The AI should not claim that it checked the account because no account or payment information is available.
 
 ---
 
-## TC05 — Angry Customer
+## TC05 — Support Callback
 
-### Customer Message
+**Customer:**
 
-Your service is terrible. I've been waiting three days for someone to help me!
+I was told someone would call me today. What time will they call?
 
-### Expected Behavior
+**Expected Behavior:**
 
-The AI should:
-
-* Acknowledge the customer's frustration.
-* Use a calm and empathetic tone.
-* Address the customer's concern.
-* Provide a useful next step.
-* Avoid making promises that are not supported by the available information.
+The AI should not invent a callback time because no support schedule or callback information is provided.
